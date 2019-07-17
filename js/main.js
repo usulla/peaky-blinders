@@ -65,7 +65,7 @@
 
                // nowDays = (Math.floor(distance / (day))) < 9 ? `0${Math.floor(distance / (day))}` : Math.floor(distance / (day));
                 nowDays = (Math.floor(distance / (day)))*24;
-                nowHours = (Math.floor((distance % (day)) / (hour)))*nowDays < 10 ? `0${Math.floor((distance % (day)) / (hour))*nowDays}` : Math.floor((distance % (day)) / (hour))*nowDays;
+                nowHours = nowDays < 10 ? `0${nowDays}` : nowDays;
                 nowMinutes = (Math.floor((distance % (hour)) / (minute))) < 10 ? `0${Math.floor((distance % (hour)) / (minute))}` : Math.floor((distance % (hour)) / (minute));
                 nowSeconds = (Math.floor((distance % (minute)) / second)) < 10 ? `0${Math.floor((distance % (minute)) / second)}` : Math.floor((distance % (minute)) / second);
                 //document.getElementById('days').innerText = nowDays;
