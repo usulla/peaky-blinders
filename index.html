@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="shortcut icon" type="image/png" href="/bin/icons/favicon.png">
+    <meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no">
+    <title>Острые козырьки</title>
+    <link href="style.css?ver=1" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css"
+        integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+    <script src="js/dataTizer.json"></script>
+    <script async src="js/analitics.js"></script>
+    <script defer src="js/main.js?ver=1"></script>
+</head>
+<body>
+    <div class="main">
+    <div class="logo">
+        <img class="datatext" src="images/datatext-min.png" alt="ТНТ4">
+        <img class="age" src="images/age-min.png" alt="ТНТ4">
+        <a class="logo_tnt4" href="https://tnt4.ru/" target="_blank">
+            <img src="images/tnt4_logo-min.png" alt="ТНТ4">
+        </a>
+    </div>
+    <div class="content">
+    <p>
+        ТНТ4 покажет культовый сериал «Острые козырьки» — <br>
+        это криминальная сага в лучших традициях фильма «Банды Нью-Йорка» и сериала «Подпольная империя».
+         
+        В главных ролях — звёзды мирового кино Киллиан Мёрфи, Сэм Нил, Том Харди, Эдриан Броуди, Эйдан Гиллен.
+    </p> <p><br>
+        Действие сериала происходит в английском Бирмингеме после окончания Первой мировой войны. Этот период в Англии можно сравнить с американским диким западом, где правили не закон, а суровый кодекс чести. Именно тогда настоящей властью на улицах стала банда «Острые козырьки». Киллиан Мёрфи играет главаря банды и вместе с тем главу семейства Шелби, которые заправляют в городе подпольным букмекерством. Сериал неоднократно становился лауреатом престижных британских премий BAFTA 
+        и National Television Awards.
+    </p> <p><br>
+        Стильные и жёсткие "Острые козырьки" на козырном канале ТНТ4. 4 сезона за 4 недели.
+Премьера с 23 июля.<br>
+Со вторника по воскресенье в 23:00 - новая серия.<br>
+По воскресеньям с 17:00 до 00:30 - сезон целиком
+</p>
+<div class="button_timer">
+    <div class="button_timer-text">
+        Смотри <span class="numer_series">01</span>
+        серию через
+        <span class="button_timer-timer">
+            <div class="container">
+                    <ul>
+                    <li class="num"><span id="hours"></span></li>
+                    <li>:</li>
+                    <li class="num"><span id="minutes"></span></li>
+                    <li>:</li>
+                    <li class="num"><span id="seconds"></span></li>
+                    </ul>
+            </div>
+        </span>
+    </div>
+    <div class="hover-text">
+            Смотри онлайн
+    </div>
+</div>
+        <div class="play-tizer">
+            <span>Смотреть промо</span>
+        </div>
+        <div class="items">
+                <script>
+                try {
+                    var dataTizers = JSON.parse(dataTizers);
+                    var innerTizer = dataTizers.map((item) => (
+                        `<div class="carousel__item">
+                            <div class="preview" data-src="${item.videoUrl}">
+                            <img src="images/heroes/${item.imageSrc}" alt="Острые козырьки">
+                            <div class="gray-over"></div>
+                            <div class="play-button">
+                                <img src='images/street_play.png' alt="Острые козырьки">
+                            </div>
+                            <!--<div class="series-title">
+                                <span>${item.releaseDay}</span>
+                                <span>${item.releaseMonth}</span>
+                            </div>-->
+                            </div>
+                           <!-- <div class="series-description">
+                                ${item.title[0]}<br>
+                                ${item.title[1]}
+                            </div>-->
+                        </div>`
+                        )).join('')
+                    document.querySelector('.items').innerHTML = innerTizer;
+                      } catch (e) {
+                        console.log(e + '');
+                      }
+                      document.query
+                </script>
+        </div>
+
+    <div class="weapon-left">
+        <img src='images/weapon11.png' alt="Острые козырьки">                
+    </div>
+    <div class="weapon-right">
+        <img src='images/weapon2.png' alt="Острые козырьки">  
+    </div>
+
+    <div class="icons-soc">
+        <a class="vk round-soc" href="https://vk.com/tnt4" target="_blank"><span><i class="fab fa-vk"></i></span></a>
+        <a class="ok round-soc" href="https://ok.ru/tnt4" target="_blank"><span><i
+                    class="fab fa-odnoklassniki"></i></span></a>
+        <a class="fb round-soc" href="https://facebook.com/tnt4ru" target="_blank"><span><i
+                    class="fab fa-facebook-f"></i></span></a>
+        <a class="ins round-soc" href="https://instagram.com/tnt4ru" target="_blank"><span><i
+                    class="fab fa-instagram"></i></span></a>
+        <a class="youtube round-soc" href="https://youtube.com/tnt4ru" target="_blank"><span><i
+                    class="fab fa-youtube"></i></span></a>
+        <a class="rutube-soc" href="https://rutube.ru/video/person/1131656/" target="_blank"><span><img
+                    class="rutube-logo" src='images/rutube-logo-min.png' alt="Улица на ТНТ4"></span></a>
+    </div>
+    <div class="iframe-tizer">
+            <iframe src="" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowfullscreen allowscriptaccess="always" allow="autoplay"></iframe>
+        <div class="close-tizer">x
+        </div>
+    </div>
+</div>
+    <noscript>
+        <div><img src="https://mc.yandex.ru/watch/37539305" style="position:absolute; left:-9999px;" alt="" /></div>
+    </noscript>
+    <noscript>
+        <img src="https://www.tns-counter.ru/V13a****tnt_ru/ru/UTF-8/tmsec=tnt4_total/" width="1" height="1" alt="" />
+    </noscript>
+</body>
+</html>
