@@ -1,10 +1,24 @@
-; (function () {
+;
+(function () {
     const iframeBlock = document.querySelector('.iframe-tizer');
     const iframeVideo = iframeBlock.querySelector('iframe');
-    const mainTizerPlayButton = document.querySelector('.play-tizer');
+    const mainTizerPlayButton = document.querySelector('.play-online');
     const previewTizers = document.querySelectorAll('.preview');
     const closeVideoButton = document.querySelector('.close-tizer');
+
+    //
+    document.querySelector('.button_timer').addEventListener("mouseover", (e) => {
+        e.currentTarget.classList.remove('show-timer');
+    e.currentTarget.classList.add('hover');
+    });
+    document.querySelector('.button_timer').addEventListener("mouseleave", (e) => {
+        e.currentTarget.classList.remove('hover');
+        e.currentTarget.classList.add('show-timer');
+    });
+    
+    // Start timer
     startTimer();
+
     //Click mainTizer
     mainTizerPlayButton.addEventListener('click', (e) => consrolVideo.playVideo(iframeVideo, e.currentTarget.dataset.src, iframeBlock));
 
@@ -63,13 +77,13 @@
                     distance = countDown - now;
                 var nowDays, nowHours, nowMinutes, nowSeconds;
 
-               // nowDays = (Math.floor(distance / (day))) < 9 ? `0${Math.floor(distance / (day))}` : Math.floor(distance / (day));
-                nowDays = (Math.floor(distance / (day)))*24;
+                // nowDays = (Math.floor(distance / (day))) < 9 ? `0${Math.floor(distance / (day))}` : Math.floor(distance / (day));
+                nowDays = (Math.floor(distance / (day))) * 24;
                 nowHours = nowDays < 10 ? `0${nowDays}` : nowDays;
                 nowMinutes = (Math.floor((distance % (hour)) / (minute))) < 10 ? `0${Math.floor((distance % (hour)) / (minute))}` : Math.floor((distance % (hour)) / (minute));
                 nowSeconds = (Math.floor((distance % (minute)) / second)) < 10 ? `0${Math.floor((distance % (minute)) / second)}` : Math.floor((distance % (minute)) / second);
                 //document.getElementById('days').innerText = nowDays;
-                    document.getElementById('hours').innerText = nowHours,
+                document.getElementById('hours').innerText = nowHours,
                     document.getElementById('minutes').innerText = nowMinutes,
                     document.getElementById('seconds').innerText = nowSeconds;
 

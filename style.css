@@ -513,6 +513,7 @@ h2 {
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center;
+  transition: all .3s;
 }
 
 .carousel__item .preview img {
@@ -521,7 +522,8 @@ h2 {
 }
 
 .carousel__item .preview .gray-over {
-  display: none;
+  /* display: none; */
+  opacity: 0;
   position: absolute;
   width: 100%;
   top: 0;
@@ -532,15 +534,16 @@ h2 {
   -o-transition: all 0.5s;
   transition: all 0.5s;
   border-radius: 4px;
+  transition: all .3s;
 }
 
 .carousel__item .play-button {
   width: 45px;
   position: absolute;
-  -webkit-transition: all 0.1s;
-  -o-transition: all 0.1s;
-  transition: all 0.1s;
-  /* opacity: 0; */
+  -webkit-transition: all 0.2s;
+  -o-transition: all 0.2s;
+  transition: all 0.2s;
+  opacity: 0.5;
 }
 .play-button.hide,
 .play-tizer.hide {
@@ -596,7 +599,8 @@ h2 {
 }
 
 .carousel__item:hover .gray-over {
-  display: block;
+  /* display: block; */
+  opacity: 1;
 }
 
 .carousel__item:hover .series-title {
@@ -857,11 +861,17 @@ align-items: center;
 justify-content: center;
 vertical-align: middle;
 }
-.button_timer:hover .button_timer-text {
+.button_timer.hover .button_timer-text {
   animation: slideUp 0.7s cubic-bezier(0.2, 0.6, 0.2, 1) forwards;
 }
-.button_timer:hover .hover-text {
+/* .button_timer.show-timer .button_timer-text {
+  animation: slideFromDownTimer 0.5s cubic-bezier(0.2, 0.6, 0.2, 1) .3s forwards;
+} */
+.button_timer.hover .hover-text {
   animation: slideFromDown 0.5s cubic-bezier(0.2, 0.6, 0.2, 1) .1s forwards;
+}
+.button_timer.show-timer .hover-text {
+  animation: slideUp 0.7s cubic-bezier(0.2, 0.6, 0.2, 1) forwards;
 }
 .button_timer:hover {
   cursor: pointer;
@@ -896,6 +906,22 @@ vertical-align: middle;
     transform: translateY(-100%);
   }
 }
+@keyframes slideFromDownTimer {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(130%);
+    transform: translateY(130%);
+  }
+  30% {
+    opacity: 0.8;
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(-0%);
+    transform: translateY(0%);
+  }
+}
+
 .button_timer-text .numer_series {
   font-weight: 800 !important;
   font-size: 38px;
@@ -918,12 +944,15 @@ vertical-align: middle;
   transition: all .5s ease;
 }
 .button_timer-text{
+  animation: slideFromDownTimer 0.7s cubic-bezier(0.2, 0.6, 0.2, 1) .2s forwards;
   transition: all .5s ease;
   vertical-align: middle;
   height: 78px;
   display: flex;
   align-items: center;
   justify-content: center;
+  -webkit-transform: translateY(130%);
+  transform: translateY(130%);
 }
 .button_timer-timer li {
   display: inline-block;
@@ -944,4 +973,13 @@ li.num:first-child{
 }
 li.num:last-child{
   text-align: left;
+}
+
+.icons-soc-block:hover a{
+  opacity:0.7;
+  transition:all .4s easy;
+}
+
+.icons-soc-block:hover a:hover {
+  opacity:1;
 }
