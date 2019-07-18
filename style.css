@@ -248,6 +248,21 @@ h2 {
   width: 9vw;
 }
 @media screen and (max-width: 768px) {
+  .weapon-left{
+    position: absolute;
+    left: -54vw;
+    width: 60vw;
+    max-width: 848px;
+    bottom: 60vw;
+  }
+  .weapon-right {
+    position: absolute;
+    right: -32vw;
+    width: 71vw;
+    max-width: 731px;
+    bottom: 100vw;
+    transform: rotate(40deg);
+}
   .button_timer {
     width: 90vw !important;
     height: 12vw !important;
